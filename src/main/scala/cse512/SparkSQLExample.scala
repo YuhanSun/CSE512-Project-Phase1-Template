@@ -13,7 +13,7 @@ object SparkSQLExample {
   def main(args: Array[String]) {
     val spark = SparkSession
       .builder()
-      .appName("CSE512-Phase2")
+      .appName("CSE512-Phase1")
       .config("spark.some.config.option", "some-value")//.master("local[*]")
       .getOrCreate()
 
