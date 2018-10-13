@@ -1,9 +1,9 @@
 
-# CSE512-Project-Phase2-Requirement
+# CSE512-Project-Phase1-Requirement
 
 ## Requirement
 
-In Project Phase 2, you need to write two User Defined Functions ST\_Contains and ST\_Within in SparkSQL and use them to do four spatial queries:
+In Project Phase 1, you need to write two User Defined Functions ST\_Contains and ST\_Within in SparkSQL and use them to do four spatial queries:
 
 * Range query: Use ST_Contains. Given a query rectangle R and a set of points P, find all the points within R.
 * Range join query: Use ST_Contains. Given a set of Rectangles R and a set of Points S, find all (Point, Rectangle) pairs such that the point is within the rectangle.
@@ -84,31 +84,18 @@ If you are using the Scala template, note that:
 4. Two example datasets are put in "src/resources" folder. arealm10000 is a point dataset and zcta10000 is a rectangle dataset. You can can use them to test your code but eventually you must run your code on NYC taxi trip dataset. Our auto-grading system will also run your code on many different datasets.
 5. Here is an example that tells you how to submit your jar using "spark-submit"
 ```
-./bin/spark-submit CSE512-Project-Phase2-Template-assembly-0.1.0.jar result/output rangequery src/resources/arealm10000.csv -93.63173,33.0183,-93.359203,33.219456 rangejoinquery src/resources/arealm10000.csv src/resources/zcta10000.csv distancequery src/resources/arealm10000.csv -88.331492,32.324142 1 distancejoinquery src/resources/arealm10000.csv src/resources/arealm10000.csv 0.1
+./bin/spark-submit CSE512-Project-Phase1-Template-assembly-0.1.0.jar result/output rangequery src/resources/arealm10000.csv -93.63173,33.0183,-93.359203,33.219456 rangejoinquery src/resources/arealm10000.csv src/resources/zcta10000.csv distancequery src/resources/arealm10000.csv -88.331492,32.324142 1 distancejoinquery src/resources/arealm10000.csv src/resources/arealm10000.csv 0.1
 ```
 6. A test case file is given: ``exampleinput``. A correct answer is given: ``exampleanswer``
 
-### 5. Vocareum (submission site)
-
-In Vocareum, all groups share a single but powerful cluster.
-
-Vocareum is for submission only. After uploading your jar, directly click "submit".
-
-Do not test your code here. You have limited submission times. Every submission impacts your grade! 
-
-### Website
-
-https://www.vocareum.com/
-
-### Your Spark job log is in "aggregated.log" file of your Vocareum "LatestSubmission" folder
 
 ## Submission
 
-1. Submit your code on Vocareum website in order to get your grade.
-2. Submit your project source code onto Blackboard in a compress zip file of "cse512-phase2-GROUPNAME" for plagiarism detection. Note that: you need to make sure your code can compile and package by entering ```sbt assembly```. We will run the compiled package on our cluster directly using "spark-submit".
-3. If your code cannot compile and package, you will not receive any points.
+1. Submit your the compiled jar file onto Blackboard. The jar file should be named with "CSE512-Project-Phase1-Template-assembly-0.1.0-groupname-studentID.jar". Student id a 10 digit number on your sun card. You only need to put the student ID of one member of your group.
+3. Submit your project source code onto Blackboard in a compress zip file of "cse512-phase1-GROUPNAME" for plagiarism detection. Note that: you need to make sure your code can compile and package by entering ```sbt assembly```. We will run the compiled package on our cluster directly using "spark-submit".
+4. If your code cannot compile and package, you will not receive any points.
 
-## How to debug your code in IDE
+## How to debug your code in Local IDE
 
 If you are using the Scala template
 
@@ -123,6 +110,9 @@ If you are using the Scala template
 
 1. Go to project root folder
 2. Run ```sbt assembly```. You may need to install sbt in order to run this command.
-3. Find the packaged jar in "./target/scala-2.11/CSE512-Project-Phase2-Template-assembly-0.1.0.jar"
+3. Find the packaged jar in "./target/scala-2.11/CSE512-Project-Phase1-Template-assembly-0.1.0.jar"
 4. Submit the jar to Spark using Spark command "./bin/spark-submit"
-5. **You must revert Step 3 and 4 above and recompile your code before use spark-submit!!!**
+5. **If you debug your code in IDE, you must revert Step 3 and 4 above and recompile your code before use spark-submit!!!**
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTg0MzUxODQ1NV19
+-->
