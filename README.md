@@ -113,3 +113,6 @@ If you are using the Scala template
 3. Find the packaged jar in "./target/scala-2.11/CSE512-Project-Phase1-Template-assembly-0.1.0.jar"
 4. Submit the jar to Spark using Spark command "./bin/spark-submit"
 5. **If you debug your code in IDE, you must revert Step 3 and 4 above and recompile your code before use spark-submit!!!**
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTg0MzUxODQ1NV19
+-->
